@@ -27,6 +27,14 @@ public class TableSortSearch {
 		//To fetch the salary of an employee
 	     WebElement salary = driver.findElement(By.xpath("//td[text()='A. Ramos']//following-sibling::td[5]"));
 	     System.out.println(salary.getText());
+	     
+	     //To fetch the employees who are in San Francisco
+	     List <WebElement> Sanf = driver.findElements(By.xpath("//td[text()='San Francisco']//preceding-sibling::td[2]"));
+	     System.out.println("Number of Sanf:"   +Sanf.size());
+			for (WebElement cell : Sanf) {
+				System.out.println(cell.getText());
+			}
+	     
 	}
 }
 
